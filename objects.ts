@@ -23,5 +23,4 @@ let createCourse=(user:{name:string,course:string,price:number,isPaid:boolean}):
 }
 createCourse({name:"ps",course:"CSE",price:22,isPaid:true})
 
-type Id=number |string;  //using this we have the id of type number or string
 export{}
