@@ -6,6 +6,23 @@ type User= {  //it is user defined data type in ts //it is type alias
     isActive:boolean,
     college?:string //it is optional is that it can be passed or not
 }
+
+
+let myUser : User={
+    _id:7833,
+    name:"ps",
+    age:21,
+    email:"p@ps",
+    isActive:true
+}
+
+let createUser=(u:User):User=>{
+    return u;
+}
+// myUser._id=1234 //can not be changed as it is in read only form
+createUser(myUser);
+
+//creating new type
 type collegeName={
     collegeName:string
 }
@@ -21,17 +38,5 @@ type college= collegeName & collegeAdd & collegePin &{
         collegeExist:boolean
 }
 
-let myUser : User={
-    _id:7833,
-    name:"ps",
-    age:21,
-    email:"p@ps",
-    isActive:true
-}
 
-let createUser=(u:User):User=>{
-    return u;
-}
-// myUser._id=1234 //can not be changed as it is in read only form
-createUser(myUser);
 export {}
