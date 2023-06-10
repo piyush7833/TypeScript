@@ -15,7 +15,7 @@ type User={
 const allUsers:User[]=[];
 allUsers.push({name:"ps",isActive:true});
 
-const mlModels:number[][]=[
+const mlModels:readonly number[][]=[  //we can also have readonly type array
     [1,2,3,4],  //array inside array //2d array
     [5,6,7,8]
 ]
