@@ -23,7 +23,7 @@ const ps = new User("ps@ps", "ps");
 // ps.email;  //not accessible
 
 class Users {
-    private _courseCount=1;
+    protected _courseCount=1;
     private readonly email: string  //now eamil can.t be accessible outside the class  //everything without marked is public  //in js we use #email to make it private
     name: string
     city: string = ""//pass the value in constructor //if not then initialise it with default value
@@ -56,7 +56,12 @@ class Users {
 
 }
 
-
+class subUser extends Users{  //inheritance in typescript //it can acquire properties of pblic and protected //protected memers are only acessible inside the class and get inherited too
+isFamily:boolean=true;
+changeCourseCount(){
+    this._courseCount=4;  //if coursecount is private then it shouldn't be inherited just like in c++
+}
+}
 
 
 
