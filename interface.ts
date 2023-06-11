@@ -6,7 +6,7 @@ interface User{
     email:string,
     // startTrial:()=>boolean //less clear
     startTrial():boolean //it also means that it is method,
-    getCoupon(couponCode:string,off:number):number // we can use method in interface not in types
+    getCoupon(couponCode:string,off:number):number // we can use method in interface not in types //we can only declare but not define it
 }
 interface User{
     googleAuth:boolean  //we can add values in interface after declaring it ones which is not possible in types
