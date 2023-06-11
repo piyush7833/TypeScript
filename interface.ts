@@ -19,4 +19,26 @@ interface Admin extends User{
 }
 
 
+interface takePhoto{
+    cameraMode:string,
+    filter:string,
+    burstMode:boolean,
+    camNum:number
+}
+interface cReels{
+    createReels():void
+}
+class Instagram implements takePhoto, cReels {  //it is basically like instagram is using takephoto as protocol and it must have properties which are in takephoto
+constructor(
+    public cameraMode:string,
+    public filter:string,
+    public burstMode:boolean,
+    public camNum:number,
+    public reels:boolean
+){}
+    createReels(): void {
+        return
+    }
+}
+
 export{}
